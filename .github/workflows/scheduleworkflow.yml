@@ -1,0 +1,17 @@
+
+name: Scheduled Message Workflow
+
+on:
+  schedule:
+    - cron: '30 6 * * *'
+
+jobs:
+  print-message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Scheduled Message
+        run: echo "Hello! This workflow runs daily at 12 PM IST."
+
+      - name: Print Current Time
+        run: date
